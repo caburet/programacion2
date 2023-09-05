@@ -1,30 +1,9 @@
+
+print ("Acá estuvo el profesor Joel Partida. Saludos a todos")
+print ("Esto es un primer cambio hecho por Joel Partido y revisado por Joel Partida")
+print ("esta es mi modificacion Hipperdinger")
 print ("Acá estuvo la alumna Critina Morales. Saludos a todos")
 print ("Esto es un primer cambio hecho por Joel Partido y revisado por Joel Partida")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 print ("Acá estuvo Juan Chaparro.")
 
 
