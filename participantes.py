@@ -1,5 +1,6 @@
-
 print ("Acá estuvo el profesor Joel Partida. Saludos a todos")
+print("Esto es un primer cambio hecho por Joel Partido y revisado por Joel Partida")
+print("hecho en clase, joaquin hernandez")
 print ("Esto es un primer cambio hecho por Joel Partido y revisado por Joel Partida")
 
 print("Primer cambio Gabriel Ponce")
@@ -14,6 +15,7 @@ print("Hola me llamo Luciano Balot y este es mi primer cambio.")
 print(" es mi primer commit")
 print("Estoy escribiendo, soy Bruno")
 print("Primer cambio Gabriel Ponce")
+print("cambio de Camila Piergentili")
 print("mi primer cambio Wanda Suarez")
 print("cambio por Emiliano Correa")
 print ("estoy haciendo esto en clase y mi nombre es Daniel D'Onofrio")
