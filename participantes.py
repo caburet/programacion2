@@ -18,17 +18,25 @@ print ("Esto es un primer cambio hecho por Joel Partido y revisado por Joel Part
 
 
 
+
+
+
+
+
+
+
 print ("Acá estuvo Juan Chaparro.")
 
+
+print("Estoy en clase haviendo codigo y soy Mikeas Correa.")
+
 print("Soy MAria Eugenia Losada")
-
-
-
-
 print("Hola me llamo Luciano Balot y este es mi primer cambio.")
-
 print(" es mi primer commit")
 
 
-print("Primer cambio Gabriel Ponce")
 
+
+print("Primer cambio Gabriel Ponce")
+print("mi primer cambio Wanda Suarez")
+print("cambio por Emiliano Correa")
