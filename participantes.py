@@ -36,3 +36,5 @@ print("Acá estuvo el alumno Diego Bruno. Aguante Boca")
 print("Mi primer cambioo, Matias Farias")
 print("😂😂😂 Realizado por Matias Bussetti")
 
+print("Acá estuvo el alumno Gabriel Ponce. Un saludo para todos!")
+
