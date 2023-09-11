@@ -85,6 +85,18 @@ def Ej_2():
         print(f"No hay una palabra con mas de {longitud} carcteres")
         
 #Ejercicio 3
+def Ej_3():
+    #3. Lee el contenido de un archivo de texto llamado "datos.txt" y crea una lista con todas las líneas 
+    #   líneas del archivo, utilizando list comprehensions.
+    
+    ruta = "dato/datos.txt"
+    archivo = open(ruta, "r")
+
+    lista = [linea.strip() for linea in archivo ]
+
+    print(lista)
+
+
 def MainMenu():
     print("********************") 
     print("**  1 - Ejercicio **")
@@ -136,7 +148,7 @@ while (sigue):
     elif opcion == "3":
         print("3 - Ejercicio")
         print(separador)
-        #Ej_3()
+        Ej_3()
         print(separador)
         system("pause")
         system("cls")
