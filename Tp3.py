@@ -34,6 +34,24 @@ def obtener_num_mayor_0(texto):
             print("Eso no es un número entero válido. Inténtalo de nuevo.")
             print(separador)
 
+def obtener_nota_valida(texto):
+    
+    while True:
+        try:
+            numero = float(input(texto))
+
+            if numero >= 0 and numero <= 10:
+                print(separador)
+                return numero
+            else:
+                print(separador)
+                print("El numero tiene que estar comprendido entre el 0 y el 10")
+                print(separador)
+        except ValueError:
+            print(separador)
+            print("Eso no es un número entero válido. Inténtalo de nuevo.")
+            print(separador)
+
 #Ejercicio 1
 
 def Ej_1():
@@ -253,6 +271,72 @@ def Ej_8():
     print(lista_unicos)
 
 
+#Ejercicio 9
+
+def Ej_9():
+    #9. Dadas dos listas de números del mismo tamaño, crea una nueva lista que contenga la multiplicación 
+    #   de los elementos correspondientes de ambas listas utilizando list comprehensions.
+    lista1 = [2, 4, 6, 8, 2]
+    lista2 = [1, 3, 5, 7, 5]
+
+    lista_multiplicacion = [x*y for x,y in zip(lista1, lista2)]
+    indice = 0
+    
+    for x,y in zip(lista1, lista2):
+        print(f"Resultado de {x} * {y} = {lista_multiplicacion[indice]}")
+        indice += 1
+
+#Ejercicio 10
+
+def Ej_10():
+    #10. Dada una lista de números, crea dos listas separadas: una que contenga los números pares y 
+    #    otra que contenga los números impares utilizando list comprehensions.
+    
+    lista_completa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    lista_pares = [numero for numero in lista_completa if numero % 2 == 0]
+    lista_impares = [numero for numero in lista_completa if numero % 2 != 0]
+    
+    #Usando filter
+    lista_pares = list(filter(lambda x: x %2  == 0, lista_completa))
+    lista_impares = list(filter(lambda x: x %2  != 0, lista_completa))
+    
+    print(f"Numeros pares: {lista_pares}")
+    print(f"Numeros impares: {lista_impares}")
+
+
+#Ejercicio 11
+
+def info_estudiantes():   
+    
+    repeticion = obtener_num_mayor_0("Escriba la cantidad de estudiantes que desea ingresar: ")
+
+    for i in range(repeticion):
+        # Diccionario con datos de estudiantes
+        estudiante = {}
+
+        nombre = input(f"Nombre del alumno Nro° {i+1}: ")
+        estudiante["nombre"] = nombre
+
+        nota1 = obtener_nota_valida("Escriba la nota 1: ")
+        estudiante["nota1"] = nota1
+
+        nota2 = obtener_nota_valida("Escriba la nota 2: ")
+        estudiante["nota2"] = nota2
+
+        nota_final = obtener_nota_valida("Escriba la nota final: ")
+        estudiante["nota_final"] = nota_final
+
+    return estudiante
+
+def Ej_11():
+    #11. Dada una lista de diccionarios que contienen información de estudiantes de una materia 
+    #    (nombre_apellido, legajo, nota_parcial1, nota_parcial2, nota_final), crea una lista que contenga los nombres 
+    #    de todos los estudiantes que han obtenido una calificación superior a 90 en al menos un examen utilizando list comprehensions.
+    
+    estudiantes = info_estudiantes()
+
+    print(estudiantes)
 
 def MainMenu():
     print("********************") 
@@ -364,12 +448,30 @@ while (sigue):
     elif opcion == "9":
         print("9 - Ejercicio")
         print(separador)
-        #Ej_9()
+        Ej_9()
         print(separador)
-        system("pause")
-        system("cls")
-        #input("Presione Enter para continuar")
-        #os.system("clear")
+        #system("pause")
+        #system("cls")
+        input("Presione Enter para continuar")
+        os.system("clear")
+    elif opcion == "10":
+        print("10 - Ejercicio")
+        print(separador)
+        Ej_10()
+        print(separador)
+        #system("pause")
+        #system("cls")
+        input("Presione Enter para continuar")
+        os.system("clear")
+    elif opcion == "11":
+        print("11 - Ejercicio")
+        print(separador)
+        Ej_11()
+        print(separador)
+        #system("pause")
+        #system("cls")
+        input("Presione Enter para continuar")
+        os.system("clear")
 
     else:
         print("Opcion incorrecta, pruebe de vuelta")
