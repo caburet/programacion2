@@ -89,14 +89,23 @@ def Ej_3():
     #3. Lee el contenido de un archivo de texto llamado "datos.txt" y crea una lista con todas las líneas 
     #   líneas del archivo, utilizando list comprehensions.
     
-    ruta = "dato/datos.txt"
+    ruta = "datos.txt"
     archivo = open(ruta, "r")
 
     lista = [linea.strip() for linea in archivo ]
 
-    print(lista)
+    print("Las lineas del archivo son: ")
+    contador = 1
+    for linea in lista:    
+        print(f"La linea Nroº {contador} es: {linea}")
 
 
+#Ejercicio 4
+
+def Ej_4():
+    #4. Dado un diccionario de palabras y sus definiciones, crea una lista que contenga sólo las palabras que 
+    #   comienzan con una letra específica (por ejemplo, "a") indicada por el usuario, utilizando list comprehensions.
+    print(separador)
 def MainMenu():
     print("********************") 
     print("**  1 - Ejercicio **")
@@ -157,7 +166,7 @@ while (sigue):
     elif opcion == "4":
         print("4 - Ejercicio")
         print(separador)
-        #Ej_4()
+        Ej_4()
         print(separador)
         system("pause")
         system("cls")
