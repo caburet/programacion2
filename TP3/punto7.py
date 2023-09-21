@@ -9,6 +9,8 @@ def ContarVocales(palabra):
 palabra=''
 while palabra!='salir':
     palabra=input("Ingrese una palabra, ingrese 'salir' para cerrar el programa ").lower()
+    if palabra=='salir': break
     contador=ContarVocales(palabra)
     print(f"La palabra {palabra} contiene {contador} vocales")
+print("Gracias por utilizar el programa")
 
