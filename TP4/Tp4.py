@@ -19,6 +19,9 @@ def MainMenu():
     print("**  9 - Ejercicio **")
     print("** 10 - Ejercicio **")
     print("** 11 - Ejercicio **")   
+    print("** 12 - Ejercicio **")   
+    print("** 13 - Ejercicio **")   
+    print("** 14 - Ejercicio **")   
     print("**  0 - Salir     **")
     print("********************")
 
@@ -174,7 +177,7 @@ def Ej_8():
 
 def Ej_9():
     #9. Dada una lista de palabras, generar una lista con las iniciales de cada palabra.
-    print("Bienvenido al ejericcio 9, donde guardaremos en una lista con las iniciales de las palabras que hay en una lista")
+    print("Bienvenido al ejericio 9, donde guardaremos en una lista con las iniciales de las palabras que hay en una lista")
     print(separador)
     lista = ["hola" , "carlitos" , "JA" , "jajajaja" , "weyland" , "boca"]
 
@@ -183,6 +186,53 @@ def Ej_9():
     print(f"La lista con las palabras es: {lista}")
     print(f"La lista con las iniciales es: {lista_iniciales}")
 
+def Ej_10():
+    #10. Dada una lista de diccionarios con los alumnos y notas de un curso, calcular el 
+    #    promedio del curso. Puede usar una lista como la siguiente: 
+    lista_dic = [
+        {'nombre': 'Hector', 'nota': 70}, 
+        {'nombre': 'Juan', 'nota': 45}, 
+        {'nombre': 'Pedro', 'nota': 80}, 
+        {'nombre': 'Ana', 'nota': 60},  
+        {'nombre': 'Florencia', 'nota': 95}
+    ]
+    print("Bienvenido al ejercicio 10, donde calcularemos el promedio de notas de un curso usando reduce")
+    print(separador)
+    #La x es donde se va ir sumando (x empieza valor cero dado por el tercer argumento)
+    #y la 'y' es la nota que va iterando de la lista
+
+    suma = reduce(lambda x, y: x + y["nota"], lista_dic,0)
+    
+    promedio = suma / len(lista_dic)
+
+    print(f"El promdio del curso es de {promedio}")
+
+def Ej_11():
+    #11. Encuentra el número mayor de una lista utilizando reduce.
+
+    print("Bienvendio al ejercicio 11, donde encontraremos el numero mayor de una lista utilizando reduce")
+    print(separador)
+    lista = [1, 4, 2, 1, 2, 5, 7, 4]
+
+    num_mayor = reduce(lambda x, y: x if x > y else y, lista)
+
+    print(f"La lista es: {lista}")
+    print(f"El numero mas grande de la lista es: {num_mayor}")
+
+def Ej_12():
+    #12. Utilice reduce para concatenar una lista de cadenas en una sola cadena
+    lista = ["Hola,", "soy,", "Pedro,", "Weyland,", "y,", "tengo,", "19,", "años" ]
+    
+
+    print("Bienvenido al ejercicio 12, donde concatenaremos las cadenas de una lista usando reduce ")
+    print(separador)
+
+    aux = reduce(lambda x,y: x + y, lista)
+    palabra = aux.replace(",", " ")
+
+    print(f"La lista completa seria {lista}")
+    print(f"Y esta seria la cadena completa: '{palabra}'")
+    
 #Main
 sigue = True
 
@@ -286,21 +336,48 @@ while (sigue):
     elif opcion == "10":
         print("10 - Ejercicio")
         print(separador)
-        #Ej_10()
+        Ej_10()
         print(separador)
-        #system("pause")
-        #system("cls")
-        input("Presione Enter para continuar")
-        os.system("clear")
+        system("pause")
+        system("cls")
+        #input("Presione Enter para continuar")
+        #os.system("clear")
     elif opcion == "11":
         print("11 - Ejercicio")
         print(separador)
-        #Ej_11()
+        Ej_11()
         print(separador)
-        #system("pause")
-        #system("cls")
-        input("Presione Enter para continuar")
-        os.system("clear")
+        system("pause")
+        system("cls")
+        #input("Presione Enter para continuar")
+        #os.system("clear")
+    elif opcion == "12":
+        print("12 - Ejercicio")
+        print(separador)
+        Ej_12()
+        print(separador)
+        system("pause")
+        system("cls")
+        #input("Presione Enter para continuar")
+        #os.system("clear")
+    elif opcion == "13":
+        print("13 - Ejercicio")
+        print(separador)
+        #Ej_13()
+        print(separador)
+        system("pause")
+        system("cls")
+        #input("Presione Enter para continuar")
+        #os.system("clear")
+    elif opcion == "14":
+        print("14 - Ejercicio")
+        print(separador)
+        #Ej_14()
+        print(separador)
+        system("pause")
+        system("cls")
+        #input("Presione Enter para continuar")
+        #os.system("clear")
 
     else:
         print("Opcion incorrecta, pruebe de vuelta")
