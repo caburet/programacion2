@@ -1,6 +1,7 @@
 from os import system
 from functools import reduce
 import os 
+import datetime
 global separador
 separador = "------------------------"
 
@@ -232,7 +233,42 @@ def Ej_12():
 
     print(f"La lista completa seria {lista}")
     print(f"Y esta seria la cadena completa: '{palabra}'")
+
+def Ej_13():
+    #13. Filtrar una lista de diccionarios por una condición. 
+    #    Ej: filtrar la lista del punto 10 para obtener notas de los alumnos aprobados.
     
+    
+    lista_dic = [
+            {'nombre': 'Hector', 'nota': 70}, 
+            {'nombre': 'Juan', 'nota': 45}, 
+            {'nombre': 'Pedro', 'nota': 80}, 
+            {'nombre': 'Ana', 'nota': 60},  
+            {'nombre': 'Florencia', 'nota': 95}
+        ]
+    
+    aprobados = list(filter(lambda x: x["nota"] >= 60, lista_dic))
+
+    print(f"Estas son las notas aprobadas {aprobados} ")
+
+def Ej_14():
+    #14. Dada una lista de diccionarios con nombre, fecha de nacimiento, y teléfono, 
+    #    crear una nueva lista con los diccionarios de las personas que aún no cumplieron años 
+    #    respecto a la fecha actual del sistema, y esa lista ordenarla por la fecha de nacimiento de menor a mayor. 
+    #    Puede usar una lista como la siguiente:
+    lista_alumnos = [
+        {"nombre":"Joaquin", "fecha_nacimiento":datetime.date(1990, 7, 2), "telefono":"123456789"}, 
+        { "nombre":"Maria", "fecha_nacimiento":datetime.date(1995, 5, 16), "telefono":"123456789"}, 
+        { "nombre":"Pedro", "fecha_nacimiento":datetime.date(1992, 9, 12), "telefono":"123456789"}, 
+        { "nombre":"Ana", "fecha_nacimiento":datetime.date(1991, 9, 22), "telefono":"123456789"}, 
+        { "nombre":"Florencia", "fecha_nacimiento":datetime.date(1994, 12, 8), "telefono":"123456789"}, 
+        { "nombre":"Hector", "fecha_nacimiento":datetime.date(1993, 4, 4), "telefono":"123456789"}
+    ]
+
+    
+
+
+
 #Main
 sigue = True
 
@@ -363,7 +399,7 @@ while (sigue):
     elif opcion == "13":
         print("13 - Ejercicio")
         print(separador)
-        #Ej_13()
+        Ej_13()
         print(separador)
         system("pause")
         system("cls")
