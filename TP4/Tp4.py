@@ -251,23 +251,47 @@ def Ej_13():
 
     print(f"Estas son las notas aprobadas {aprobados} ")
 
+
 def Ej_14():
     #14. Dada una lista de diccionarios con nombre, fecha de nacimiento, y teléfono, 
     #    crear una nueva lista con los diccionarios de las personas que aún no cumplieron años 
     #    respecto a la fecha actual del sistema, y esa lista ordenarla por la fecha de nacimiento de menor a mayor. 
     #    Puede usar una lista como la siguiente:
     lista_alumnos = [
-        {"nombre":"Joaquin", "fecha_nacimiento":datetime.date(1990, 7, 2), "telefono":"123456789"}, 
-        { "nombre":"Maria", "fecha_nacimiento":datetime.date(1995, 5, 16), "telefono":"123456789"}, 
-        { "nombre":"Pedro", "fecha_nacimiento":datetime.date(1992, 9, 12), "telefono":"123456789"}, 
-        { "nombre":"Ana", "fecha_nacimiento":datetime.date(1991, 9, 22), "telefono":"123456789"}, 
-        { "nombre":"Florencia", "fecha_nacimiento":datetime.date(1994, 12, 8), "telefono":"123456789"}, 
-        { "nombre":"Hector", "fecha_nacimiento":datetime.date(1993, 4, 4), "telefono":"123456789"}
+        {"nombre":"Joaquin", "fecha_nacimiento" : datetime.date(1990, 7, 2), "telefono":"123456789"}, 
+        { "nombre":"Maria", "fecha_nacimiento" : datetime.date(1995, 5, 16), "telefono":"123456789"}, 
+        { "nombre":"Pedro", "fecha_nacimiento" : datetime.date(1992, 9, 12), "telefono":"123456789"}, 
+        { "nombre":"Ana", "fecha_nacimiento" : datetime.date(1991, 9, 22), "telefono":"123456789"}, 
+        { "nombre":"Florencia", "fecha_nacimiento" : datetime.date(1994, 12, 8), "telefono":"123456789"}, 
+        { "nombre":"Hector", "fecha_nacimiento" : datetime.date(1993, 4, 4), "telefono":"123456789"},
+        { "nombre":"Hector", "fecha_nacimiento" : datetime.date(2023, 10, 24), "telefono":"123456789"}
     ]
 
+    no_cumplieron = []
     
+    fecha_actual = datetime.date.today()
+    #Guardo en variables mes y dia actuales
+    mes_actual = fecha_actual.month
+    dia_actual = fecha_actual.day
+    
+    for i in range(len(lista_alumnos)):
+        aux = lista_alumnos[i]["fecha_nacimiento"]
+        #Guardo en variables mes y dia del estudiante
+        mes_persona = aux.month
+        dia_persona = aux.day
 
+        #Si mes actual es igual al mes de la persona compara el los dias para ver si cumple
+        if mes_actual == mes_persona:
+            if dia_persona > dia_actual:
+                no_cumplieron.append(lista_alumnos[i])
+        #Si el mes actual es menos que el de la persona significa que no cumplio anios todavia
+        elif mes_actual < mes_persona:
+            no_cumplieron.append(lista_alumnos[i])
+    
+    #no_cumplieron = [alumno for alumno in lista_alumnos if (alumno["fecha_nacimiento"].month, alumno["fecha_nacimiento"].day) > (fecha_actual.month, fecha_actual.day)]
 
+    print(f"Estas son las personas que no cumplieron anios por ahora: {no_cumplieron}")
+        
 
 #Main
 sigue = True
@@ -408,7 +432,7 @@ while (sigue):
     elif opcion == "14":
         print("14 - Ejercicio")
         print(separador)
-        #Ej_14()
+        Ej_14()
         print(separador)
         system("pause")
         system("cls")
