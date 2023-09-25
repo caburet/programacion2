@@ -1,3 +1,4 @@
+from functools import reduce
 # complete con su fecha de nacimiento, nombre , legajo y dni
 # Al finalizar subir el archivo al aula virtual.
 mifecha='00-00-0000'  
@@ -24,15 +25,37 @@ def hashFecha(stringfecha):
 # y "Cantidad" del tipo entero, y  los valores deben corresponder a los datos del archivo CSV
 
 def crearStock(archivo):
-    lista=[]
-    return lista
+    stock = []  
+    with open(archivo, mode='r') as file:
+        lines= file.readlines()
+        for line in lines:
+            nombre, precio, cantidad = line.split(',')
+            producto = {
+                "Nombre": nombre,
+                "Precio": float(precio),
+                "Cantidad": int(cantidad)
+            }
+            stock.append(producto)
+    return stock
 
 #4) Crear dos funcion que utilizando la estructura del punto 3. Una que nos devuelva el producto mas caro y la otra que nos devuelva el producto con menor cantidad.
 def productoMasCaro(lista):
-    return "nombre"
+    precio_mas_alto = 0
+    nombre_producto_mas_caro=''
+    for producto in lista:
+        if producto["Precio"] > precio_mas_alto:
+            nombre_producto_mas_caro = producto["Nombre"]
+    return nombre_producto_mas_caro
+
 def productoMenorCantidad(lista):
-    return "nombre"
+    Menor_cantidad = 100
+    nombre_menor_cantidad=''
+    for producto in lista:
+        if producto["cantidad"] < Menor_cantidad:
+            Menor_cantidad = producto["cantidad"]
+            nombre_menor_cantidad = producto["Nombre"]
+    return nombre_menor_cantidad
 
 # 5) Implemente una funcion que nos devuelva el total de la posible ganancia. Esto es, Cantidad * Precio para cada producto y que sume todos los resultados. (¿Se puede usar reduce? Fundamente)
 def totalGanancia(lista):
-    return 0
+    return reduce(lambda acc, producto: acc + float(producto['precio']) * int(producto['cantidad']), lista, 0.0)
