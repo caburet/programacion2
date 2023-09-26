@@ -9,7 +9,7 @@ midni=30000000
 # ejemplo fecha 01-01-1984 = (01+ 01 +1984) % 4 = 1986 % 4 = 2
 
 def hashFecha(stringfecha):
-    return 0
+    return 1
 
 # 2) Explique el funcionamiento y describa el algoritmo del ordenamiento burbuja.    
 # Funcionamiento: Teniendo una lista...
