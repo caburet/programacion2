@@ -9,7 +9,17 @@ midni=30000000
 # ejemplo fecha 01-01-1984 = (01+ 01 +1984) % 4 = 1986 % 4 = 2
 
 def hashFecha(stringfecha):
-    return 0
+    separarlo= stringfecha.split('-')
+    if (len(separarlo)==3):
+        try:
+            dia = int(separarlo[0])
+            mes = int(separarlo[1])
+            anio = int(separarlo[2])
+        except ValueError:
+            return False
+        total= dia + mes +anio
+
+    return total % 4
 
 # 2) Explique el funcionamiento y describa el algoritmo del ordenamiento burbuja.    
 # Funcionamiento: Teniendo una lista...
@@ -24,9 +34,9 @@ def hashFecha(stringfecha):
 #Crea una lista de diccionarios donde cada diccionario represente un producto. Los diccionarios deben tener tres claves: "Nombre" del tipo string, "Precio" del tipo float 
 # y "Cantidad" del tipo entero, y  los valores deben corresponder a los datos del archivo CSV
 
-def crearStock(archivo):
+def crearStock(rutaarchivo):
     stock = []  
-    with open(archivo, mode='r') as file:
+    with open(rutaarchivo, mode='r') as file:
         lines= file.readlines()
         for line in lines:
             nombre, precio, cantidad = line.split(',')
@@ -58,4 +68,4 @@ def productoMenorCantidad(lista):
 
 # 5) Implemente una funcion que nos devuelva el total de la posible ganancia. Esto es, Cantidad * Precio para cada producto y que sume todos los resultados. (¿Se puede usar reduce? Fundamente)
 def totalGanancia(lista):
-    return reduce(lambda acc, producto: acc + float(producto['precio']) * int(producto['cantidad']), lista, 0.0)
+    return reduce(lambda x, producto: x + float(producto['precio']) * int(producto['cantidad']), lista, 0.0)
