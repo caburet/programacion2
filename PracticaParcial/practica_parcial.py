@@ -9,7 +9,17 @@ midni=30000000
 # ejemplo fecha 01-01-1984 = (01+ 01 +1984) % 4 = 1986 % 4 = 2
 
 def hashFecha(stringfecha):
-    return 1
+    separarlo= stringfecha.split('-')
+    if (len(separarlo)==3):
+        try:
+            dia = int(separarlo[0])
+            mes = int(separarlo[1])
+            anio = int(separarlo[2])
+        except ValueError:
+            return False
+        total= dia + mes +anio
+
+    return total % 4
 
 # 2) Explique el funcionamiento y describa el algoritmo del ordenamiento burbuja.    
 # Funcionamiento: Teniendo una lista...
