@@ -170,3 +170,6 @@ while sigue==True:
     else:
         sigue=False
 print("Gracias")
+
+
+print("FIN")
