@@ -1,3 +1,4 @@
+#euge
 lista_ejemplo=[1,4,7,9,-1,-6,10]
 
 def burbuja(lista):
