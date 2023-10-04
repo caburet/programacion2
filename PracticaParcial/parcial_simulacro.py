@@ -26,7 +26,7 @@ def hashFecha(stringfecha):
     fecha_valida.append(validar_num(fecha_lista[1]))
     fecha_valida.append(validar_num(fecha_lista[2]))
 
-    suma = 0
+    
     suma = fecha_valida[0] + fecha_valida[1] + fecha_valida[2]
 
     return suma % 4
@@ -71,7 +71,7 @@ def crearStock(ruta):
         #y agrego el diccionario a la lista
         lista.append(diccionario)
 
-    archivo.close
+    archivo.close()
 
     return lista
 
