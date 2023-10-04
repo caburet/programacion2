@@ -179,4 +179,4 @@ def totalGanancia(lista):
     print(f"La ganancia posible seria de: {ganancia}")
     return 0
 
-#totalGanancia(lista)
+totalGanancia(lista)

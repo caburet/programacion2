@@ -1,3 +1,7 @@
-texto = "hola"
+indice = 2
+palabra = "Ej_"
+aux = str(indice)
+palabra += aux
 
-print(texto[0])
+hola = function(palabra)
+print(type(hola))

@@ -64,3 +64,4 @@ lista_eventos, claves_eventos = leer_archivos(ruta_eventos)
 
 for i in enumerate(claves_alumnos):
     print(i)
+    

@@ -1,30 +1,33 @@
 from os import system
-from functools import reduce
 import os 
+from functools import reduce
 import datetime
+from Modulos.menu import MainMenu
+
+
 global separador
 separador = "------------------------"
 
 #Funciones extras
 
-def MainMenu():
-    print("********************") 
-    print("**  1 - Ejercicio **")
-    print("**  2 - Ejercicio **")
-    print("**  3 - Ejercicio **")
-    print("**  4 - Ejercicio **")
-    print("**  5 - Ejercicio **")
-    print("**  6 - Ejercicio **")
-    print("**  7 - Ejercicio **")
-    print("**  8 - Ejercicio **")
-    print("**  9 - Ejercicio **")
-    print("** 10 - Ejercicio **")
-    print("** 11 - Ejercicio **")   
-    print("** 12 - Ejercicio **")   
-    print("** 13 - Ejercicio **")   
-    print("** 14 - Ejercicio **")   
-    print("**  0 - Salir     **")
-    print("********************")
+# def MainMenu():
+#     print("********************") 
+#     print("**  1 - Ejercicio **")
+#     print("**  2 - Ejercicio **")
+#     print("**  3 - Ejercicio **")
+#     print("**  4 - Ejercicio **")
+#     print("**  5 - Ejercicio **")
+#     print("**  6 - Ejercicio **")
+#     print("**  7 - Ejercicio **")
+#     print("**  8 - Ejercicio **")
+#     print("**  9 - Ejercicio **")
+#     print("** 10 - Ejercicio **")
+#     print("** 11 - Ejercicio **")   
+#     print("** 12 - Ejercicio **")   
+#     print("** 13 - Ejercicio **")   
+#     print("** 14 - Ejercicio **")   
+#     print("**  0 - Salir     **")
+#     print("********************")
 
 def numero_valido(texto):
     while True: 
@@ -298,7 +301,7 @@ sigue = True
 
 while (sigue):
 
-    MainMenu()
+    MainMenu(14)
     opcion = input("Ingrese una opcion: ")
     print(separador)
     if opcion == "0":
