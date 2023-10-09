@@ -39,7 +39,7 @@ def filtrarLista(lista, letra):
 # Socios que no pudieron comprar entradas: 
 # Florencia
 # Hector .....
-# ruta archivo para usar F5: PrimerParcial\entradas.csv
+# ruta archivo para usar F5: RecuperatorioPrimerParcial\entradas.csv
 # probar con 20 entradas
 
 def procesarVentas(rutaArchivo, cantidadEntradas):
