@@ -54,14 +54,14 @@ def leer_archivos(ruta):
     return lista, claves
 
 
-ruta_alumnos = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\alumnos.csv"
-ruta_inscripciones = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\inscripciones.csv"
-ruta_eventos = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\eventos.csv"
+#ruta_alumnos = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\alumnos.csv"
+#ruta_inscripciones = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\inscripciones.csv"
+#ruta_eventos = r"C:\Users\weyla\Escritorio\Practico_3\programacion2\TP5\eventos.csv"
+ruta_alumnos = "/home/pepoweyland/Escritorio/Practico_3/programacion2/TP5/archivos/alumnos.csv"
+ruta_inscripciones = "/home/pepoweyland/Escritorio/Practico_3/programacion2/TP5/archivos/inscripciones.csv"
+ruta_eventos = "/home/pepoweyland/Escritorio/Practico_3/programacion2/TP5/archivos/eventos.csv"
 
 lista_alumnos, claves_alumnos = leer_archivos(ruta_alumnos)
 lista_inscripciones, claves_inscripciones = leer_archivos(ruta_inscripciones)
 lista_eventos, claves_eventos = leer_archivos(ruta_eventos)
 
-for i in enumerate(claves_alumnos):
-    print(i)
-    
