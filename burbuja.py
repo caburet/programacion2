@@ -10,8 +10,7 @@ def burbuja(lista):
                 pass
             elif lista[j]>lista[j+1]:# par  par   ||  impar impar
                 lista[j],lista[j+1]=lista[j+1],lista[j]
-
-                
+       
 
     return lista
 print (burbuja(lista_ejemplo))
